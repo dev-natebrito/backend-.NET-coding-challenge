@@ -1,7 +1,7 @@
 ﻿using System;
 
 /*
- 
+
     *
    ***
   *****
@@ -18,9 +18,14 @@ namespace Pyramid
     {
         private static void Pyramid(int height)
         {
-            Console.WriteLine("A beautiful pyramid");
+            for (var i = 1; i <= height; i++)
+            {
+                var spaces = new string(' ', height - i);
+                var stars  = new string('*', 2 * i - 1);
+                Console.WriteLine(spaces + stars);
+            }
         }
-        
+
         public static void Main(string[] args)
         {
             Pyramid(5);
